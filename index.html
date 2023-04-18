@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body bgcolor="darkslategray" style="display: flex; justify-content: center; align-items: center;">
+    <form class="login-form">
+        <label for="id-input" class="login-label">Enter your ID:</label>
+        <input type="text" id="id-input" name="id" class="login-input">
+        <button type="button" id="submit-button" class="button-86" aria-label="Log In">Log In</button>
+    </form>
+
+    <noscript>
+        <p class="login-message">You will not be able to log in. Your browser does not support Javascript.</p>
+    </noscript>
+
+    <script>
+        var button = document.getElementById('submit-button');
+        button.addEventListener('click', function() {
+            var idInput = document.getElementById('id-input');
+            var idValue = idInput.value;
+            if (idValue === '1234' || idValue === '12345') {
+                window.location.href = 'games.html';
+            } else {
+                alert('Incorrect ID number');
+            }
+        });
+    </script>
+</body>
+</html>
